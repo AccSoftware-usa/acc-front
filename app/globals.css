@@ -1,26 +1,95 @@
+/*
+ * ==================================================================
+ * ARCHIVO CSS GLOBAL (CORREGIDO)
+ * ==================================================================
+ */
+
+/*
+ * ------------------------------------------------------------------
+ * PASO 1: IMPORTAR TAILWIND
+ * ------------------------------------------------------------------
+ */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * ------------------------------------------------------------------
+ * PASO 2: DEFINIR EL TEMA (Colores del Mockup)
+ * ------------------------------------------------------------------
+ */
+@theme {
+  /*
+   * TUS COLORES DE MARCA (Basados en el Mockup):
+   */
+  --color-brand-orange: #e2863d;  /* El naranja de los botones del mockup */
+  --color-brand-dark: #222222;    /* El color oscuro del footer del mockup */
+  --color-brand-white: #FFFFFF;   /* El blanco puro del header y fondo */
+  --color-brand-text: #333333;  /* El gris oscuro para el texto (nav links) */
+
+  /*
+   * TUS FUENTES PERSONALIZADAS (Se mantienen):
+   */
+  --font-sans: var(--font-humanist), system-ui, sans-serif;
+  --font-display: var(--font-arista), system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/*
+ * ------------------------------------------------------------------
+ * PASO 3: ESTILOS BASE Y MEJORAS DE UX
+ * ------------------------------------------------------------------
+ */
+@layer base {
+  
+  /* 1. UX: Suavizado de fuentes y scroll */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* 2. UX: Tema base (Light/Dark) y tipografía legible */
+  body {
+    @apply font-sans text-brand-text bg-brand-white;
+    @apply dark:text-brand-white dark:bg-brand-dark;
+    @apply leading-relaxed;
+  }
+  /* en src/app/globals.css */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 3. UX: Títulos responsivos y balanceados */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  /* 4. UX: Transiciones suaves en interacciones */
+  a,
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"] {
+    @apply transition-colors duration-200 ease-in-out;
+  }
+
+  /* * 5. UX: Estilos de foco (¡AQUÍ ESTÁ LA CORRECCIÓN!)
+   */
+  *:focus-visible {
+     /* Aplicamos las clases de 'outline' y 'ring' */
+    @apply outline-none ring-2 ring-offset-2;
+    
+    /* * En lugar de '@apply ring-brand-blue', aplicamos la variable
+     * de CSS directamente. Esto evita el error de "clase desconocida".
+     * Usamos el color naranja del mockup.
+     */
+    ring-color: var(--color-brand-orange);
+    
+    /* El offset usa el fondo blanco del mockup */
+    @apply ring-offset-brand-white dark:ring-offset-brand-dark;
+  }
+
+
+
+
 }
