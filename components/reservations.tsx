@@ -46,7 +46,7 @@ export function Reservations() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const telefono = "+573016751132";
+        const telefono = "+15616982828";
         const form = e.currentTarget;
         const formData = new FormData(form);
 
@@ -245,7 +245,7 @@ export function Reservations() {
                         ¿Prefieres un contacto más directo?
                     </p>
                     <Link
-                        href="https://wa.me/573016751132"
+                        href="https://wa.me/15616982828"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-4 inline-flex items-center gap-x-2 rounded-full bg-green-600 px-6 py-2.5 

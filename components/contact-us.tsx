@@ -55,7 +55,7 @@ const ContactUs = () => {
                                 </dt>
                                 <dd>
                                     <a href="tel:+1234567890" className="hover:text-gray-900">
-                                        +1 (234) 567-890
+                                        +1 (786) 580-2979
                                     </a>
                                 </dd>
                             </div>
