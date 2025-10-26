@@ -27,7 +27,7 @@ export default function Home() {
       {/* Botón flotante de WhatsApp */}
       <div className="fixed bottom-6 right-6 z-50"> {/* Fija la posición en la parte inferior derecha */}
         <Link
-          href="https://wa.me/TUNUMERO" // <-- ¡IMPORTANTE! REEMPLAZA CON TU NÚMERO DE WHATSAPP (código de país + número, sin signos ni espacios)
+          href="https://wa.me/+15616982828" // <-- ¡IMPORTANTE! REEMPLAZA CON TU NÚMERO DE WHATSAPP (código de país + número, sin signos ni espacios)
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 hover:bg-green-600 text-white 
