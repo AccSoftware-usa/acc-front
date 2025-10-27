@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function HeroSection() {
   return (
@@ -26,6 +27,16 @@ export function HeroSection() {
         // Ya no necesitas la clase "hero-container"
       >
         <div className="max-w-3xl">
+          <div className="mb-6"> {/* Agregamos un div para el espaciado inferior */}
+            <Image
+              src="/logo_acc_white.png" // Ruta a tu logo desde la carpeta 'public'
+              alt="Logo de la empresa"
+              width={200} // Ajusta el ancho según tus necesidades
+              height={100} // Ajusta el alto según tus necesidades
+              className="mx-auto sm:mx-0" // Centra el logo en móvil, alinea a la izquierda en desktop
+            />
+          </div>
+
           <h1
             // -----------------------------------------------------------------
             // --- CAMBIOS AQUÍ (Título) ---

@@ -3,11 +3,11 @@
 import AboutUs from '@/components/about-us';
 import { AnimatedSection } from '@/components/animated-section';
 import ContactUs from '@/components/contact-us';
+import { FloatingWhatsAppButton } from '@/components/floating-whatsapp';
 import { HeroSection } from '@/components/hero-section';
 import { Preloader } from '@/components/preloader';
 import { Reservations } from '@/components/reservations';
 import Testimonials from '@/components/testimonials';
-import { WhatsAppIcon } from '@/components/whatsapp-icon';
 // --- Imports de React y Hooks ---
 import { useState, useEffect } from 'react';
 
@@ -70,22 +70,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      {/* 4. Botón flotante de WhatsApp */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <a
-          href="https://wa.me/+15616982828" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-600 text-white 
-                     p-4 rounded-full shadow-lg 
-                     flex items-center justify-center 
-                     transition-transform duration-200 hover:scale-110"
-          aria-label="Contactar por WhatsApp"
-        >
-          {/* Usamos el componente de icono separado */}
-          <WhatsAppIcon />
-        </a>
-      </div>
+      <FloatingWhatsAppButton />
     </>
   );
 }

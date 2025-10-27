@@ -42,11 +42,8 @@ const AboutUs = () => {
         <Image
           src="/skyline-westpalmbeach-florida.avif" // <-- CAMBIA ESTO por tu imagen
           alt="Vistas de la ciudad"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          className="opacity-40" // Opacidad para oscurecer la imagen
-          priority
+          className="opacity-40 object-cover object-center" // <-- ARREGLADO          priority
+          fill
         />
 
         {/* Contenedor del texto (se superpone a la imagen) */}
@@ -55,7 +52,7 @@ const AboutUs = () => {
             Sobre Nosotros
           </h2>
           <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-200">
-            Somos una empresa de transporte confiable y puntual, enfocada en 
+            Somos una empresa de transporte confiable y puntual, enfocada en
             ofrecer una experiencia cómoda y segura en cada trayecto.
           </p>
           <p className="mt-8 text-2xl font-semibold italic text-brand-orange">
@@ -82,8 +79,8 @@ const AboutUs = () => {
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
 
             {features.map((feature) => (
-              <div 
-                key={feature.name} 
+              <div
+                key={feature.name}
                 className="flex flex-col rounded-2xl bg-gray-50 p-0 shadow-sm 
                            hover:shadow-lg transition-shadow duration-300 overflow-hidden" // Agregado 'overflow-hidden' para que la imagen se adapte bien a las esquinas redondeadas
               >
@@ -92,18 +89,17 @@ const AboutUs = () => {
                   <Image
                     src={feature.imageSrc}
                     alt={feature.name}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-t-2xl" // Borde redondeado solo en la parte superior
+                    className="rounded-t-2xl object-cover" // <-- ARREGLADO
+                    fill
                   />
                 </div>
 
                 <div className="p-8"> {/* Contenedor para el texto de la tarjeta */}
                   {/* Icono y Título */}
                   <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-900">
-                    <feature.icon 
-                      className="h-8 w-8 flex-none text-brand-orange" 
-                      aria-hidden="true" 
+                    <feature.icon
+                      className="h-8 w-8 flex-none text-brand-orange"
+                      aria-hidden="true"
                     />
                     {feature.name}
                   </dt>

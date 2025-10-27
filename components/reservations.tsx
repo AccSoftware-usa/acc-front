@@ -40,6 +40,16 @@ function FormField({ icon: Icon, label, children }: FormFieldProps) {
     );
 }
 
+  // 1. Define tu número y el mensaje predeterminado
+  const phoneNumber = "+15616982828";
+  const defaultMessage = "Hola, me gustaría más información sobre sus servicios de transporte.";
+
+  // 2. Codifica el mensaje para que sea seguro en una URL
+  const encodedMessage = encodeURIComponent(defaultMessage);
+
+  // 3. Construye la URL final
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
 export function Reservations() {
     const [showPopup, setShowPopup] = useState(false);
 
@@ -178,7 +188,7 @@ export function Reservations() {
                             >
                                 <option value="">Selecciona un vehículo</option>
                                 <option value="sedan">Sedan</option>
-                                <option value="suv">SUV</option>
+                                <option value="suv">Camioneta (SUV)</option>
                                 <option value="van">Van</option>
                             </select>
                         </FormField>
@@ -245,7 +255,7 @@ export function Reservations() {
                         ¿Prefieres un contacto más directo?
                     </p>
                     <Link
-                        href="https://wa.me/15616982828"
+                        href={whatsappUrl} 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-4 inline-flex items-center gap-x-2 rounded-full bg-green-600 px-6 py-2.5 
