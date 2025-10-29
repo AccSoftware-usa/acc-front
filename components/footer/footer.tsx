@@ -45,6 +45,7 @@ export function Footer() {
               <li><Link href="/#reservations" className="hover:text-white">Reservas</Link></li>
               <li><Link href="/#about-us" className="hover:text-white">Sobre Nosotros</Link></li>
               <li><Link href="/#contact-us" className="hover:text-white">Contacto</Link></li>
+              <li><Link href="/#join-us" className="hover:text-white">Trabaja con Nosotros</Link></li>
             </ul>
           </div>
           
