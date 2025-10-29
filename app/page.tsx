@@ -8,6 +8,7 @@ import { HeroSection } from '@/components/hero-section';
 import { Preloader } from '@/components/preloader';
 import { Reservations } from '@/components/reservations';
 import Testimonials from '@/components/testimonials';
+import JoinUsBanner from '@/components/join-us-banner';
 // --- Imports de React y Hooks ---
 import { useState, useEffect } from 'react';
 
@@ -62,6 +63,12 @@ export default function Home() {
 
       <AnimatedSection>
         <Testimonials />
+      </AnimatedSection>
+
+      <AnimatedSection>
+        <div id="join-us">
+          <JoinUsBanner />
+        </div>
       </AnimatedSection>
 
       <AnimatedSection>

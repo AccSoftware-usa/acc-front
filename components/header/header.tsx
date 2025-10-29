@@ -12,6 +12,7 @@ const navLinks = [
   { name: 'Inicio', href: '/#home' },
   { name: 'Sobre Nosotros', href: '/#about-us' },
   { name: 'Contacto', href: '/#contact-us' },
+  { name: 'Trabaja con Nosotros', href: '/#join-us' },
 ];
 
 export function Header() {
