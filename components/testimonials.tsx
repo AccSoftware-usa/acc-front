@@ -14,14 +14,14 @@ const testimonials = [
   {
     body: 'Usamos ACC para un traslado corporativo y todo salió perfecto. Coordinación fácil y un servicio de primera. Totalmente recomendados.',
     author: {
-      name: 'David Chen',
+      name: 'David Lopez',
       location: 'Fort Lauderdale, FL',
     },
   },
   {
     body: '¡El mejor transporte! "Pa’ lante es pa’ ya" no es solo un eslogan, es la verdad. Llegaron a tiempo y el viaje fue súper cómodo. Gracias.',
     author: {
-      name: 'Jessica Smith',
+      name: 'Jessica Giraldo',
       location: 'West Palm Beach, FL',
     },
   },

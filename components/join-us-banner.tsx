@@ -45,7 +45,7 @@ export default function JoinUsBanner({
 
         {/* 3. Texto de Apoyo */}
         <p className="mb-8 text-lg leading-7 text-gray-700">
-          ¡Trabajo sí hay! 😜 Buscamos conductores apasionados por el buen
+          ¡Trabaja con nosotros! Buscamos conductores apasionados por el buen
           servicio. Si eres profesional y quieres crecer con nosotros, este es tu
           lugar.
         </p>
