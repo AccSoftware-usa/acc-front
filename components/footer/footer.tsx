@@ -56,6 +56,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2">
               <li><a href={`mailto:${email}`} className="hover:text-white">{email}</a></li>
               <li><a href={`tel:${phone}`} className="hover:text-white">{phone}</a></li>
+              <li><a href={`tel:${phone2}`} className="hover:text-white">{phone2}</a></li>
               <li>West Palm Beach, FL, USA</li>
             </ul>
           </div>
