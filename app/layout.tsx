@@ -25,6 +25,12 @@ const arista = localFont({
 export const metadata: Metadata = {
   title: "Alliance Cars Company - Transporte Confiable",
   description: "Tu traslado, a tiempo y sin complicaciones en West Palm Beach.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/logo_acc.png",
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({

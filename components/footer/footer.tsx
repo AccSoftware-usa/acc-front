@@ -17,8 +17,9 @@ const InstagramIcon = () => (
 
 
 export function Footer() {
-  const email = "correo@tudominio.com"; // Reemplaza esto cuando tengas el email final
-  const phone = "+1 (786) 580-2979"; // Reemplaza esto
+  const email = "contact@accllc.co"; // Reemplaza esto cuando tengas el email final
+  const phone = "+1 (786) 580-2979"; 
+  const phone2 = "+1 (561) 698 2828";
   const facebookUrl = "https://www.facebook.com/AllianceCarsCompanyOficial";
   const instagramUrl = "https://www.instagram.com/alliancecarscompany/";
   

@@ -55,9 +55,23 @@ const ContactUs = () => {
                                 </dt>
                                 <dd>
                                     <a href="tel:+1234567890" className="hover:text-gray-900">
-                                        +1 (786) 580-2979
+                                        +1 (786) 580 2979
                                     </a>
                                 </dd>
+                                
+                            </div>
+                            <div className="flex gap-x-4">
+                                <dt className="flex-none">
+                                    <span className="sr-only">Teléfono</span>
+                                    {/* --- CAMBIO AQUÍ: Usando tu color de marca --- */}
+                                    <MdOutlinePhone className="h-7 w-6 text-brand-orange" aria-hidden="true" />
+                                </dt>
+                                <dd>
+                                    <a href="tel:+1234567890" className="hover:text-gray-900">
+                                        +1 (561) 698 2828
+                                    </a>
+                                </dd>
+                                
                             </div>
                             <div className="flex gap-x-4">
                                 <dt className="flex-none">
